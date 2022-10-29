@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* By DEFAULT -- font-size: 16px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-family: "Big Shoulders Display", cursive;
+  color: hsl(0, 0%, 95%);
+  padding: 1rem 0;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container {
+  /* width: 120rem; */
+  width: 70%;
+  margin: 10rem auto;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+figure {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.button {
+  width: 13rem;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 1.2rem 2.4rem;
+  border-radius: 30px;
+  border: none;
+  margin-top: 7rem;
+}
+
+.button:hover,
+.button:active {
+  box-shadow: 0 0 0 3px #fff;
+  /* border: 2px solid #fff; */
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+.button-1 {
+  color: hsl(31, 77%, 52%);
+}
+.button-2 {
+  color: hsl(184, 100%, 22%);
+}
+.button-3 {
+  color: hsl(179, 100%, 13%);
+}
+
+.button-1:hover,
+.button-1:active {
+  background-color: hsl(31, 77%, 52%);
+}
+.button-2:hover,
+.button-2:active {
+  background-color: hsl(184, 100%, 22%);
+}
+.button-3:hover,
+.button-3:active {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  font-size: 2rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* BreakPoint at 1280px */
+@media (max-width: 80em) {
+  .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 10rem auto;
+  }
+
+  p {
+    width: 40rem;
+  }
+
+  .button {
+    margin-top: 1.6rem;
+  }
+
+  .sedan {
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 0;
+  }
+  .luxury {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+}
+
+/* BreakPoint at 704px */
+@media (max-width: 44em) {
+  .container {
+    width: 40rem;
+    grid-template-columns: 1fr;
+    margin: 10rem auto;
+  }
+
+  p {
+    width: 20rem;
+  }
+}
